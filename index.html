@@ -11,20 +11,11 @@
     <link rel="stylesheet" href="Develop/CSS/stylesheet.css" />
   </head>
   <body>
+
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Weather Watcher</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form class="d-flex" role="search">
@@ -41,81 +32,92 @@
         </div>
       </div>
     </nav>
-<div class="current-weather justify-content-md-center row">
-    <div class="card mb-3" style="max-width: 540px;">
+
+    <!-- Current Weather for Location Searched -->
+    <div class="current-weather justify-content-md-center row">
+      <div class="card mb-3" style="max-width: 540px">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="...">
+            <img src="Develop/Images/placeholder.jpeg" class="img-fluid rounded-start" alt="..." />
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              <h5 class="location card-title">Location Name</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
 
+    <!-- 5 day forecasts -->
     <div class="row justify-content-md-center">
       <div class="card" style="width: 15rem">
-        <img src="..." class="card-img-top" alt="..." />
+        <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">date</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Temp:</li>
-          <li class="list-group-item">Wind:</li>
-          <li class="list-group-item">Humidity:</li>
+          <li class="temp list-group-item">Temperature:</li>
+          <li class="wind list-group-item">Wind:</li>
+          <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
 
       <div class="card" style="width: 15rem">
-        <img src="..." class="card-img-top" alt="..." />
+        <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">date</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Temp:</li>
-          <li class="list-group-item">Wind:</li>
-          <li class="list-group-item">Humidity:</li>
+          <li class="temp list-group-item">Temperature:</li>
+          <li class="wind list-group-item">Wind:</li>
+          <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
 
       <div class="card" style="width: 15rem">
-        <img src="..." class="card-img-top" alt="..." />
+        <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">date</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Temp:</li>
-          <li class="list-group-item">Wind:</li>
-          <li class="list-group-item">Humidity:</li>
+          <li class="temp list-group-item">Temperature:</li>
+          <li class="wind list-group-item">Wind:</li>
+          <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
 
       <div class="card" style="width: 15rem">
-        <img src="..." class="card-img-top" alt="..." />
+        <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">date</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Temp:</li>
-          <li class="list-group-item">Wind:</li>
-          <li class="list-group-item">Humidity:</li>
+          <li class="temp list-group-item">Temperature:</li>
+          <li class=" wind list-group-item">Wind:</li>
+          <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
 
       <div class="card" style="width: 15rem">
-        <img src="..." class="card-img-top" alt="..." />
+        <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">date</h5>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Temp:</li>
-          <li class="list-group-item">Wind:</li>
-          <li class="list-group-item">Humidity:</li>
+          <li class="temp list-group-item">Temperature:</li>
+          <li class="wind list-group-item">Wind:</li>
+          <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
     </div>
