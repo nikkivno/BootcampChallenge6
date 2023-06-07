@@ -55,6 +55,7 @@ function getWeather(city) {
             const humidity = data.main.humidity;
             const feelsLike = data.main.feels_like;
             const windSpeed = data.wind.speed;
+            // const weatherImage = data.weather.icon;
             
 
             displayCurrentDate();
@@ -64,6 +65,9 @@ function getWeather(city) {
             document.querySelector('#currentHumidity').textContent = 'Humidity: ' + humidity;
             document.querySelector('#currentFeelsLike').textContent = 'Feels Like: ' + feelsLike;
             document.querySelector('#currentWindSpeed').textContent = 'Wind Speed: ' + windSpeed; 
+            // weatherImage.document.querySelector('#weatherImage')
+
+            // const weatherImage = document.querySelectorAll('#weatherImage')
         })
 
         .catch(error => {
@@ -94,6 +98,9 @@ function getForecast(city) {
                 
                 let windSpeed = document.querySelectorAll('.windSpeed')[cardIndex];
                 windSpeed.textContent='Wind Speed: ' + data.list[i].wind.speed;
+
+                let weatherImage = document.querySelectorAll('.weatherImage')[cardIndex];
+                weatherImage.src = `https://openweathermap.org/img/w/$%7Bdata.list[i].weather[0].icon%7D.png`;
 
                 cardIndex++
             }
