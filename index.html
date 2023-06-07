@@ -15,13 +15,14 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Weather Watcher</a>
+        <a class="navbar-brand title" href="#">Weather Watcher</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" id="search">
             <input
               class="form-control me-2"
-              type="search"
+              id="locationSearch"
+              type="text"
               placeholder="Location"
               aria-label="Search"
             />
@@ -44,15 +45,17 @@
             <div class="card-body">
               <h5 class="location card-title">Location Name</h5>
               <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                <div id="currentTemp">Temperature:</div>
+                <div id="currentHumidity">Humidity:</div>
+                <div id="currentFeelsLike">Feels Like:</div>
+                <div id=""></div>
+                <div></div>
               </p>
-              <p class="card-text">
+              <!-- <p class="card-text">
                 <small class="text-body-secondary"
                   >Last updated 3 mins ago</small
                 >
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -64,11 +67,12 @@
       <div class="card" style="width: 15rem">
         <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">date</h5>
+          <h5 class="card-title date">date</h5>
         </div>
         <ul class="list-group list-group-flush">
           <li class="temp list-group-item">Temperature:</li>
-          <li class="wind list-group-item">Wind:</li>
+          <li class="tempmin list-group-item">Temperature:</li>
+          <li class="tempmax list-group-item">Temperature:</li>
           <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
@@ -76,11 +80,12 @@
       <div class="card" style="width: 15rem">
         <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">date</h5>
+          <h5 class="card-title date">date</h5>
         </div>
         <ul class="list-group list-group-flush">
           <li class="temp list-group-item">Temperature:</li>
-          <li class="wind list-group-item">Wind:</li>
+          <li class="tempmin list-group-item">Temperature:</li>
+          <li class="tempmax list-group-item">Temperature:</li>
           <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
@@ -88,11 +93,12 @@
       <div class="card" style="width: 15rem">
         <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">date</h5>
+          <h5 class="card-title date">date</h5>
         </div>
         <ul class="list-group list-group-flush">
           <li class="temp list-group-item">Temperature:</li>
-          <li class="wind list-group-item">Wind:</li>
+          <li class="tempmin list-group-item">Temperature:</li>
+          <li class="tempmax list-group-item">Temperature:</li>
           <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
@@ -100,11 +106,12 @@
       <div class="card" style="width: 15rem">
         <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">date</h5>
+          <h5 class="card-title date">date</h5>
         </div>
         <ul class="list-group list-group-flush">
           <li class="temp list-group-item">Temperature:</li>
-          <li class=" wind list-group-item">Wind:</li>
+          <li class="tempmin list-group-item">Temperature:</li>
+          <li class="tempmax list-group-item">Temperature:</li>
           <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>
@@ -112,11 +119,12 @@
       <div class="card" style="width: 15rem">
         <img src="Develop/Images/placeholder.jpeg" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">date</h5>
+          <h5 class="card-title date">date</h5>
         </div>
         <ul class="list-group list-group-flush">
           <li class="temp list-group-item">Temperature:</li>
-          <li class="wind list-group-item">Wind:</li>
+          <li class="tempmin list-group-item">Temperature:</li>
+          <li class="tempmax list-group-item">Temperature:</li>
           <li class="humidity list-group-item">Humidity:</li>
         </ul>
       </div>

@@ -1,8 +1,30 @@
+/* Nav Bar */
+
+.title {
+    color: #003463;
+}
+
+.btn {
+    color: #003463;
+    border: #003463 1px solid;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #003463;
+}
+
+/* Current Weather */
+
 .current-weather {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
+
+/* Upcoming Forecasts */
+
 .card {
     margin: 7px;
+    border: #003463 solid 1px;
 }
