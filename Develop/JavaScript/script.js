@@ -1,11 +1,23 @@
 const key = '2e309e024080180b521d8b0a1763af0d';
 
+
+// Search bar to API
+
 document.querySelector('#search').addEventListener("submit", function (event) {
     event.preventDefault();
     let location = document.getElementById('locationSearch').value;
     getWeather(location);
     getForecast(location);
 })
+
+// Current Time
+
+function displayCurrentDate() {
+    let currentDate = dayjs().format('MMM, D')
+    document.querySelector('#currentDate').textContent= 'Date: ' + currentDate;
+}
+
+// Current Weather 
 
 function getWeather(city) {
     const keyUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=ad42d5d3bd5325566ad7fa64ed6aa17a&units=metric';
@@ -29,6 +41,8 @@ function getWeather(city) {
             console.log('Error:', error)
         });
 }
+
+// 5 day predicted forecast
 
 function getForecast(city) {
     const keyUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=ad42d5d3bd5325566ad7fa64ed6aa17a&units=metric';
@@ -61,6 +75,8 @@ function getForecast(city) {
             console.log('Error:', error)
         });
 }
+
+// Local Storage 
 
 function storeSearch() {
     const searchHistory = localStorage.getItem('weatherSearchHistory');
