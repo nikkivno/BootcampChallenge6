@@ -17,11 +17,13 @@ function getWeather(city) {
             const temperature = data.main.temp;
             const humidity = data.main.humidity;
             const feelsLike = data.main.feels_like;
+            const windSpeed = data.wind.speed;
 
             document.querySelector('.location').textContent = cityName;
             document.querySelector('#currentTemp').textContent = 'Temperature: ' + temperature +'°C';
             document.querySelector('#currentHumidity').textContent = 'Humidity: ' + humidity;
             document.querySelector('#currentFeelsLike').textContent = 'Feels Like: ' + feelsLike;
+            document.querySelector('#currentWindSpeed').textContent = 'Wind Speed: ' + windSpeed;
         })
         .catch(error => {
             console.log('Error:', error)
@@ -47,11 +49,8 @@ function getForecast(city) {
                 let humidity = document.querySelectorAll('.humidity')[cardIndex];
                 humidity.textContent='Humidity: ' + data.list[i].main.humidity;
                 
-                let tempMin = document.querySelectorAll('.tempmin')[cardIndex];
-                tempMin.textContent='Temp Min: ' + data.list[i].main.temp_min;
-                
-                let tempMax = document.querySelectorAll('.tempmax')[cardIndex];
-                tempMax.textContent='Temp Max: ' + data.list[i].main.temp_max;
+                let windSpeed = document.querySelectorAll('.windSpeed')[cardIndex];
+                windSpeed.textContent='Wind Speed: ' + data.list[i].wind.speed;
 
                 cardIndex++
             }
@@ -67,8 +66,10 @@ function storeSearch() {
     const searchHistory = localStorage.getItem('weatherSearchHistory');
     const parsedSearchHistory = searchHistory ? JSON.parse(searchHistory) : [];
     const newSearchTerm = document.getElementById('locationSearch').value;
+    
     parsedSearchHistory.push(newSearchTerm);
+
     const updatedSearchHistory = JSON.stringify(parsedSearchHistory);
+
     localStorage.setItem('weatherSearchHistory', updatedSearchHistory);
-    document.getElementById('locationSearch').value = '';
   }
