@@ -53,9 +53,6 @@ function getForecast(city) {
                 let tempMax = document.querySelectorAll('.tempmax')[cardIndex];
                 tempMax.textContent='Temp Max: ' + data.list[i].main.temp_max;
 
-                // grab all the shit
-                // add in min and max temps 
-                
                 cardIndex++
             }
         }
@@ -66,5 +63,12 @@ function getForecast(city) {
         });
 }
 
-localStorage.setItem('submit', Location)
-
+function storeSearch() {
+    const searchHistory = localStorage.getItem('weatherSearchHistory');
+    const parsedSearchHistory = searchHistory ? JSON.parse(searchHistory) : [];
+    const newSearchTerm = document.getElementById('locationSearch').value;
+    parsedSearchHistory.push(newSearchTerm);
+    const updatedSearchHistory = JSON.stringify(parsedSearchHistory);
+    localStorage.setItem('weatherSearchHistory', updatedSearchHistory);
+    document.getElementById('locationSearch').value = '';
+  }
