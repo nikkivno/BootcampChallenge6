@@ -21,10 +21,20 @@
     margin-bottom: 50px;
 }
 
+.currentWeatherImage {
+    margin-top: 20%;
+    width: 100%;
+}
 
 /* Upcoming Forecasts */
 
 .card {
     margin: 7px;
+    margin-bottom: 50px;
     border: #003463 solid 1px;
+}
+
+.weatherImage {
+    width: 20%;
+    margin: auto;
 }

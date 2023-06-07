@@ -1,5 +1,6 @@
 const key = '2e309e024080180b521d8b0a1763af0d';
 
+
 // Search bar to API
 
 document.querySelector('#search').addEventListener("submit", function (event) {
@@ -31,7 +32,7 @@ function getWeather(city) {
             const windSpeed = data.wind.speed;
             
             let currentWeatherImage = document.querySelector('.currentWeatherImage')
-            currentWeatherImage.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+            currentWeatherImage.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
             displayCurrentDate();
 
