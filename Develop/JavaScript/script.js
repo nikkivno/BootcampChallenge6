@@ -1,5 +1,30 @@
 const key = '2e309e024080180b521d8b0a1763af0d';
 
+// const weatherImage = document.querySelectorAll('#weatherImage')
+// const sunImage = "https://openweathermap.org/img/wn/01d@2x.png";
+// const sunCloudImage = " https://openweathermap.org/img/wn/02d@2x.png"
+// const cloudImage = "https://openweathermap.org/img/wn/03d@2x.png"
+// const stormCloudImage = " https://openweathermap.org/img/wn/04d@2x.png"
+// const stormRainImage = " https://openweathermap.org/img/wn/09d@2x.png"
+// const sunRainImage = " https://openweathermap.org/img/wn/10d@2x.png"
+// const lighteningImage = " https://openweathermap.org/img/wn/11d@2x.png"
+// const snowImage = " https://openweathermap.org/img/wn/13d@2x.png"
+// const mistImage = " https://openweathermap.org/img/wn/50d@2x.png"
+
+// if (data.weather[0].main == "Clouds") {
+//     weatherImage.src = cloudImage;
+// } else if (data.weather[0].main == "Clear" ) {
+//     weatherImage.src = sunImage;
+// }  else if (data.weather[0].main == "Thunderstorm" ) {
+//     weatherImage.src = lighteningImage;
+// }   else if (data.weather[0].main == "Drizzle" ) {
+//     weatherImage.src = sunImage
+// }   else if (data.weather[0].main == "Rain" ) {
+//     weatherImage.src = sunRainImage;
+// }   else if (data.weather[0].main == "Snow" ) {
+//     weatherImage.src = snowImage;
+// }
+
 
 // Search bar to API
 
@@ -30,6 +55,7 @@ function getWeather(city) {
             const humidity = data.main.humidity;
             const feelsLike = data.main.feels_like;
             const windSpeed = data.wind.speed;
+            
 
             displayCurrentDate();
 
@@ -37,7 +63,7 @@ function getWeather(city) {
             document.querySelector('#currentTemp').textContent = 'Temperature: ' + temperature +'°C';
             document.querySelector('#currentHumidity').textContent = 'Humidity: ' + humidity;
             document.querySelector('#currentFeelsLike').textContent = 'Feels Like: ' + feelsLike;
-            document.querySelector('#currentWindSpeed').textContent = 'Wind Speed: ' + windSpeed;
+            document.querySelector('#currentWindSpeed').textContent = 'Wind Speed: ' + windSpeed; 
         })
 
         .catch(error => {
