@@ -13,7 +13,7 @@ document.querySelector('#search').addEventListener("submit", function (event) {
 // Current Time
 
 function displayCurrentDate() {
-    let currentDate = dayjs().format('MMM, D')
+    let currentDate = dayjs().format('MMM D, YYYY')
     document.querySelector('#currentDate').textContent= 'Date: ' + currentDate;
 }
 
@@ -31,12 +31,15 @@ function getWeather(city) {
             const feelsLike = data.main.feels_like;
             const windSpeed = data.wind.speed;
 
+            displayCurrentDate();
+
             document.querySelector('.location').textContent = cityName;
             document.querySelector('#currentTemp').textContent = 'Temperature: ' + temperature +'°C';
             document.querySelector('#currentHumidity').textContent = 'Humidity: ' + humidity;
             document.querySelector('#currentFeelsLike').textContent = 'Feels Like: ' + feelsLike;
             document.querySelector('#currentWindSpeed').textContent = 'Wind Speed: ' + windSpeed;
         })
+
         .catch(error => {
             console.log('Error:', error)
         });
