@@ -1,31 +1,5 @@
 const key = '2e309e024080180b521d8b0a1763af0d';
 
-// const weatherImage = document.querySelectorAll('#weatherImage')
-// const sunImage = "https://openweathermap.org/img/wn/01d@2x.png";
-// const sunCloudImage = " https://openweathermap.org/img/wn/02d@2x.png"
-// const cloudImage = "https://openweathermap.org/img/wn/03d@2x.png"
-// const stormCloudImage = " https://openweathermap.org/img/wn/04d@2x.png"
-// const stormRainImage = " https://openweathermap.org/img/wn/09d@2x.png"
-// const sunRainImage = " https://openweathermap.org/img/wn/10d@2x.png"
-// const lighteningImage = " https://openweathermap.org/img/wn/11d@2x.png"
-// const snowImage = " https://openweathermap.org/img/wn/13d@2x.png"
-// const mistImage = " https://openweathermap.org/img/wn/50d@2x.png"
-
-// if (data.weather[0].main == "Clouds") {
-//     weatherImage.src = cloudImage;
-// } else if (data.weather[0].main == "Clear" ) {
-//     weatherImage.src = sunImage;
-// }  else if (data.weather[0].main == "Thunderstorm" ) {
-//     weatherImage.src = lighteningImage;
-// }   else if (data.weather[0].main == "Drizzle" ) {
-//     weatherImage.src = sunImage
-// }   else if (data.weather[0].main == "Rain" ) {
-//     weatherImage.src = sunRainImage;
-// }   else if (data.weather[0].main == "Snow" ) {
-//     weatherImage.src = snowImage;
-// }
-
-
 // Search bar to API
 
 document.querySelector('#search').addEventListener("submit", function (event) {
@@ -55,8 +29,9 @@ function getWeather(city) {
             const humidity = data.main.humidity;
             const feelsLike = data.main.feels_like;
             const windSpeed = data.wind.speed;
-            // const weatherImage = data.weather.icon;
             
+            let currentWeatherImage = document.querySelector('.currentWeatherImage')
+            currentWeatherImage.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
             displayCurrentDate();
 
@@ -65,9 +40,7 @@ function getWeather(city) {
             document.querySelector('#currentHumidity').textContent = 'Humidity: ' + humidity;
             document.querySelector('#currentFeelsLike').textContent = 'Feels Like: ' + feelsLike;
             document.querySelector('#currentWindSpeed').textContent = 'Wind Speed: ' + windSpeed; 
-            // weatherImage.document.querySelector('#weatherImage')
 
-            // const weatherImage = document.querySelectorAll('#weatherImage')
         })
 
         .catch(error => {
@@ -100,7 +73,7 @@ function getForecast(city) {
                 windSpeed.textContent='Wind Speed: ' + data.list[i].wind.speed;
 
                 let weatherImage = document.querySelectorAll('.weatherImage')[cardIndex];
-                weatherImage.src = `https://openweathermap.org/img/w/$%7Bdata.list[i].weather[0].icon%7D.png`;
+                weatherImage.src = `https://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`;
 
                 cardIndex++
             }
