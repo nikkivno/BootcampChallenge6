@@ -99,3 +99,12 @@ function storeSearch() {
 
     localStorage.setItem('weatherSearchHistory', updatedSearchHistory);
   }
+
+//   Enabling Enter/Return key search
+
+function handleKeyPress(event) {
+    if (event.keycode === 13) {
+        performSearch();
+        event.preventDefault();
+    }
+}
