@@ -2,7 +2,7 @@
 
 ## Project Description
 
-In this challenge I used the openweather API to pull data to my website to show the currect weather and predicted forecasts for the next 5 days. Using a boostrap framework to set the styling of the website I used JavaScript to create a dynamically functioning website based off of user's city searches. 
+In this challenge I used the openweather API to pull data to my website to show the currect weather and predicted forecasts for the next 5 days. Using a boostrap framework to set the styling of the website I used JavaScript to create a dynamically functioning website based off of a user's city searches. 
 
 ## Future Features
 
