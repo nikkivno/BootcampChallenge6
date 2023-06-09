@@ -18,9 +18,11 @@ If development for this project went furture I would like to:
 
 Site Link: 
 
-<img src="Develop/Images/preview-image-1.png">
+Before Search:
+<img src="Develop/Images/bfore-search.png">
 
-
+After Search:
+<img src="Develop/Images/after-search.png">
 ## License 
 
 MIT License
